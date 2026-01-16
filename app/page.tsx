@@ -170,6 +170,11 @@ export default function Home() {
   I design and build things with light, electronics, and code.
   They don’t just work. They <span className="text-[#FF9546]">glow</span>.
 </p>
+
+<div className="text-sm md:text-base text-gray-400 tracking-wide">
+ESP32 · CH32 · DMX · Art-Net · SPI · Madrix · Colorlight · Novastar · POET Designer · Node.js · and much more ;)
+</div>
+
           </div>
         </div>
       </section>
