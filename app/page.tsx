@@ -93,7 +93,7 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="hero-background min-h-screen flex items-center justify-center pt-20 px-6">
+      <section className="hero-background min-h-screen flex items-center justify-center px-6">
         <div className="max-w-6xl mx-auto text-center">
 <div className="mb-12 cat-float cat-glow">
             <Image
@@ -190,20 +190,31 @@ ESP32 · CH32 · DMX · Art-Net · SPI · Madrix · Colorlight · Novastar · PO
             <div className="grid md:grid-cols-2 gap-12 mb-16">
           
 
-              <div>
-                <h3 className="text-xl font-semibold mb-6 text-[#FF9546]">Social</h3>
-                <div className="space-y-4">
-                  <a
-                    href="https://instagram.com/ashleyslab"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="contact-item flex items-center space-x-3 text-gray-300"
-                  >
-                    <i className="fab fa-instagram text-2xl"></i>
-                    <span className="text-lg">@ashleyslab</span>
-                  </a>
-                </div>
-              </div>
+          <div>
+  <h3 className="text-xl font-semibold mb-6 text-[#FF9546]">Social</h3>
+  <div className="space-y-4">
+    <a
+      href="https://instagram.com/ashleyslab"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="contact-item flex items-center space-x-3 text-gray-300"
+    >
+      <i className="fab fa-instagram text-2xl"></i>
+      <span className="text-lg">@ashleyslab</span>
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/ashley-van-steenacker-176362134/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="contact-item flex items-center space-x-3 text-gray-300"
+    >
+      <i className="fab fa-linkedin text-2xl"></i>
+      <span className="text-lg">LinkedIn</span>
+    </a>
+  </div>
+</div>
+
             </div>
 
             {/* Contact Form */}
