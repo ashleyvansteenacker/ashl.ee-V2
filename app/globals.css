@@ -1,26 +1,175 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --navy: #182030;
+  --dark-navy: #0f1419;
+  --orange: #ff9546;
+  --slate: #4a5568;
+  --glow-orange: rgba(255, 149, 70, 0.5);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--navy);
+  color: #f7fafc;
+  font-family: var(--font-inter);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-rajdhani);
+}
+
+.font-rajdhani {
+  font-family: var(--font-rajdhani);
+}
+
+.bg-dark-navy {
+  background-color: var(--dark-navy);
+}
+
+.glow-btn {
+  position: relative;
+  background: linear-gradient(135deg, var(--orange), #ff8c5a);
+  box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+  transition: all 0.4s ease;
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 20px #FF9546, 0 0 40px #FF9546, 0 0 60px rgba(255, 149, 70, 0.5);
+  transform: scale(1.05);
+}
+
+.glow-border {
+  border: 1px solid rgba(255, 149, 70, 0.3);
+  box-shadow: 0 0 15px rgba(255, 149, 70, 0.1);
+}
+
+.border-orange-glow {
+  border-color: rgba(255, 149, 70, 0.2);
+}
+
+.circuit-line {
+  background: linear-gradient(90deg, transparent, var(--orange), transparent);
+  height: 1px;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.cat-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Orange glow silhouette behind mascot */
+.cat-glow {
+  position: relative;
+  display: inline-block;
+}
+
+.cat-glow::before {
+  content: '';
+  position: absolute;
+  inset: -15%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 149, 70, 0.45) 0%,
+    rgba(255, 149, 70, 0.25) 30%,
+    rgba(255, 149, 70, 0.1) 50%,
+    transparent 70%
+  );
+  filter: blur(35px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--orange);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px var(--orange);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Hide scrollbar but keep scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+.contact-item {
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  color: #ffffff;
+}
+
+.contact-item:hover i {
+  color: var(--orange);
+  text-shadow: 0 0 10px var(--glow-orange);
+}
+
+.section-divider {
+  background: linear-gradient(90deg, transparent, var(--orange), transparent);
+  height: 2px;
+  margin: 4rem 0;
+  box-shadow: 0 0 10px var(--glow-orange);
+}
+
+.hero-background {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.03' stroke='%23FF9546' fill='none'%3E%3Cpath d='M50 50 L80 50 L80 80' stroke-width='1'/%3E%3Ccircle cx='80' cy='80' r='3' fill='%23FF9546'/%3E%3Cpath d='M150 80 L180 80 L180 120' stroke-width='1'/%3E%3Ccircle cx='180' cy='120' r='3' fill='%23FF9546'/%3E%3Cpath d='M250 60 L280 60 L280 90 L310 90' stroke-width='1'/%3E%3Ccircle cx='310' cy='90' r='3' fill='%23FF9546'/%3E%3Cpath d='M100 200 L130 200 L130 230' stroke-width='1'/%3E%3Ccircle cx='130' cy='230' r='3' fill='%23FF9546'/%3E%3Cpath d='M280 180 L310 180 L310 210 L340 210' stroke-width='1'/%3E%3Ccircle cx='340' cy='210' r='3' fill='%23FF9546'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 400px 400px;
+  pointer-events: none;
+}
+
+.accent-border-left {
+  border-left: 2px solid #FF9546;
+  padding-left: 2rem;
+}
+
+.form-input {
+  background-color: rgba(26, 35, 50, 0.5);
+  border: 1px solid rgba(255, 149, 70, 0.2);
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(255, 149, 70, 0.1);
 }

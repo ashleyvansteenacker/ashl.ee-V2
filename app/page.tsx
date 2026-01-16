@@ -1,65 +1,229 @@
-import Image from "next/image";
+import Image from 'next/image';
+import ProjectCard from '@/app/components/ProjectCard';
+import catMascot from '@/public/tfx-logo.svg';
+import FeaturedWorkCarousel from '@/app/components/FeaturedWorkCarousel';
+import HapticLink from './components/HapticLink';
+
+
+const projects = [
+  {
+    title: 'Public Bulding Ghent',
+    description:
+  'A discreet media wall installation for the City of Ghent (Belgium), integrating dynamic visuals into the architecture.',
+    tags: ['Madrix', 'Art-Net', 'SPI', 'Neonflex'],
+    link: '',
+    image: '/projects/gent.jpg',
+  },
+  {
+    title: 'Amsterdam project',
+    description:
+  'Implemented DMX connectivity and lighting control for a neon installation as part of a new concept in Amsterdam.',
+    tags: ['DMX-512', 'CueCore2', 'B-Station2'],
+    link: '',
+    image: '/projects/ams.jpg',
+  },
+  {
+    title: 'Brussels Art Project ',
+    description:
+  'A collaboration with an artist where audio and lighting came together in an immersive installation.',
+    tags: ['SPI', 'Video', 'Led Strip Studio', 'SPI-Matrix'],
+    link: '',
+    image: '/projects/bru.jpg',
+  },
+  {
+    title: 'Airport project',
+    description:
+  'Designed and implemented a large-scale LED facade installation to create dynamic lighting effects and enhance the passenger experience.',
+    tags: ['SPI', 'Led Strip Studio', 'SPI Matrix'],
+    link: '',
+     image: '/projects/airport.jpg',
+  },
+  {
+    title: 'Movement Sensor',
+    description:
+  'Built a custom motion-sensing system that triggers lighting scenes in real time to enhance interactivity.',
+    tags: ['ESP32', 'OSC', 'POET Creator', 'Wi-Fi'],
+    link: '',
+    image: '/projects/sensor.png',
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <main>
+      {/* Hero Section */}
+      <section className="hero-background min-h-screen flex items-center justify-center pt-20 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+<div className="mb-12 cat-float cat-glow">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src={catMascot}
+              alt="Cyber Cat Mascot"
+              width={400}
+              height={400}
+              className="mx-auto"
+              style={{ maxWidth: '90vw', height: 'auto' }}
+              priority
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
+
+          <div className="circuit-line w-64 mx-auto mb-8"></div>
+
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
+            Ashley Van Steenacker
+          </h1>
+
+          <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-[#FF9546]">
+            Creative Technologist
+          </h2>
+
+          <p className="text-xl md:text-2xl text-gray-400 mb-16 font-light tracking-wide">
+            Designing Things That Glow
+          </p>
+
+          <div className="circuit-line w-64 mx-auto mb-16"></div>
+
+<HapticLink
+  href="#work"
+  className="glow-btn inline-block px-8 py-4 rounded-lg text-white font-semibold text-lg transition-all"
+  haptic="click"
+>
+  View My Work <i className="fas fa-arrow-right ml-2"></i>
+</HapticLink>
+
         </div>
-      </main>
+      </section>
+
+        {/* Featured Work Section */}
+<section id="work" className="py-12 px-6">
+  <div className="max-w-6xl mx-auto">
+    <div className="section-divider"></div>
+
+    <div className="flex items-end justify-between gap-4 mb-12">
+      <h2 className="text-4xl md:text-5xl font-bold">Featured Work</h2>
+      <span className="text-sm text-gray-400">Scroll →</span>
     </div>
+
+    <FeaturedWorkCarousel projects={projects} />
+  </div>
+</section>
+
+
+
+      {/* About Section */}
+      <section id="about" className="py-24 px-6">
+         <div className="max-w-6xl mx-auto">
+    <div className="section-divider"></div>
+
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">About</h2>
+
+          <div className="accent-border-left">
+    <p className="text-lg md:text-xl leading-relaxed text-gray-300 mb-6">
+  I&apos;m a creative technologist who thrives at the intersection of design and code.
+  I craft digital experiences that don&apos;t just work. They <span className="text-[#FF9546]">glow</span>.
+</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-24 px-6">
+          <div className="max-w-6xl mx-auto">
+    <div className="section-divider"></div>
+
+          <div className="accent-border-left">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12">Get In Touch</h2>
+
+            <div className="grid md:grid-cols-2 gap-12 mb-16">
+          
+
+              <div>
+                <h3 className="text-xl font-semibold mb-6 text-[#FF9546]">Social</h3>
+                <div className="space-y-4">
+                  <a
+                    href="https://instagram.com/ashleyslab"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contact-item flex items-center space-x-3 text-gray-300"
+                  >
+                    <i className="fab fa-instagram text-2xl"></i>
+                    <span className="text-lg">@ashleyslab</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className="mt-12">
+              <h3 className="text-2xl font-semibold mb-6 text-[#FF9546]">
+                Send a Message
+              </h3>
+              <form
+                action="https://formspree.io/f/xwvvveba"
+                method="POST"
+                className="space-y-6"
+              >
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-300 mb-2"
+                  >
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="form-input w-full px-4 py-3 rounded-lg text-white"
+                    placeholder="Your name"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-300 mb-2"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="form-input w-full px-4 py-3 rounded-lg text-white"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-300 mb-2"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows={5}
+                    className="form-input w-full px-4 py-3 rounded-lg text-white resize-none"
+                    placeholder="Tell me about your project..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="glow-btn px-8 py-3 rounded-lg text-white font-semibold text-lg transition-all"
+                >
+                  Send Message <i className="fas fa-paper-plane ml-2"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
