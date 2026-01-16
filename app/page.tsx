@@ -11,7 +11,8 @@ const projects = [
     description:
   'A discreet media wall installation for the City of Ghent (Belgium), integrating dynamic visuals into the architecture.',
     tags: ['Madrix', 'Art-Net', 'SPI', 'Neonflex'],
-    link: '',
+    client:['Vivalyte', 'Neopaul'],
+    link: 'https://www.kraaijvanger.nl/nl/projecten/stadskantoor-gent',
     image: '/projects/gent.jpg',
   },
   {
@@ -19,7 +20,8 @@ const projects = [
     description:
   'Implemented DMX connectivity and lighting control for a neon installation as part of a new concept in Amsterdam.',
     tags: ['DMX-512', 'CueCore2', 'B-Station2'],
-    link: '',
+     client:['Vivalyte', 'Orbit Lighting'],
+    link: 'https://www.tripadvisor.co.uk/Attraction_Review-g188590-d27797071-Reviews-The_All_Out_Amsterdam-Amsterdam_North_Holland_Province.html',
     image: '/projects/ams.jpg',
   },
   {
@@ -27,7 +29,8 @@ const projects = [
     description:
   'A collaboration with an artist where audio and lighting came together in an immersive installation.',
     tags: ['SPI', 'Video', 'Led Strip Studio', 'SPI-Matrix'],
-    link: '',
+     client:['Vivalyte', 'Agnes Guillaume'],
+    link: 'https://www.instagram.com/p/Csn7EM0tho-/?hl=fr&img_index=2 ',
     image: '/projects/bru.jpg',
   },
   {
@@ -35,7 +38,8 @@ const projects = [
     description:
   'Designed and implemented a large-scale LED facade installation to create dynamic lighting effects and enhance the passenger experience.',
     tags: ['SPI', 'Led Strip Studio', 'SPI Matrix'],
-    link: '',
+     client:['Vivalyte', 'Neopaul'],
+    link: 'https://www.facebook.com/watch/?v=1047767099225140',
      image: '/projects/airport.jpg',
   },
   {
@@ -43,8 +47,45 @@ const projects = [
     description:
   'Built a custom motion-sensing system that triggers lighting scenes in real time to enhance interactivity.',
     tags: ['ESP32', 'OSC', 'POET Creator', 'Wi-Fi'],
+     client:['Vivalyte'],
     link: '',
     image: '/projects/sensor.png',
+  },
+    {
+    title: 'Branding GSK',
+    description:
+  'GSK wanted a unique lighting installation to represent their brand values at a major event. I developed a custom LED solution that synchronized with their presentations.',
+    tags: ['SPI', 'PIR', 'Madrix', 'DigiDot'],
+    client:['Vivalyte', 'Praxis'],
+    link: 'https://www.instagram.com/p/C0wA3X4LLRI/?hl=af',
+    image: '/projects/gsk.jpg',
+  },
+    {
+    title: 'Branding AVA',
+    description:
+  'AVA needed an eye-catching Sign to draw attention at their shops. I designed and implemented the LED control system including a remote access solution for easy updates.',
+    tags: ['DMX-512', 'Led Strip Studio', 'Tailscale', '4G / LTE'],
+    client:['Vivalyte', 'Neopaul'],
+    link: 'https://www.linkedin.com/posts/neopaul-signs_neopaulsigns-lichtreclame-gevelbekleding-activity-7284507005157847040-blCg/?originalSubdomain=nl',
+    image: '/projects/ava.jpg',
+  },
+      {
+    title: 'Press the button',
+    description:
+  'An interactive installation where users could press a button to trigger a dynamic light show. I developed the controls to create a seamless experience.',
+    tags: ['DMX-SPI', 'Led Strip Studio', 'Video', 'Trigger'],
+    client:['Vivalyte', 'Artiscreen'],
+    link: 'https://www.facebook.com/watch/?v=952296560157213',
+    image: '/projects/arti.png',
+  },
+        {
+    title: 'Dynamic Backdrop',
+    description:
+  'Installation and configuration of a Dynamic backdrop (Low res LED screen) for a exhibition booth, enhancing the visual appeal and attracting visitors.',
+    tags: ['LED Wall', 'Colorlight', 'Video', 'Madrix'],
+    client:['Vivalyte'],
+    link: 'https://www.instagram.com/p/CjM8ZVQMCOK/?img_index=1',
+    image: '/projects/dyn.png',
   },
 ];
 
@@ -61,7 +102,7 @@ export default function Home() {
               width={400}
               height={400}
               className="mx-auto"
-              style={{ maxWidth: '90vw', height: 'auto' }}
+              sizes="(max-width: 768px) 90vw, 400px"
               priority
             />
           </div>
@@ -99,7 +140,7 @@ export default function Home() {
     <div className="section-divider"></div>
 
     <div className="flex items-end justify-between gap-4 mb-12">
-      <h2 className="text-4xl md:text-5xl font-bold">Featured Work</h2>
+      <h2 className="text-4xl md:text-5xl font-bold">Some of our past projects</h2>
       <span className="text-sm text-gray-400">Scroll →</span>
     </div>
 

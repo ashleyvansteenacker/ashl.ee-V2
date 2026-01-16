@@ -8,6 +8,7 @@ interface ProjectCardProps {
   tags: string[];
   link: string;
   image?: string;
+  client?: string[];
 }
 
 export default function ProjectCard({
@@ -16,6 +17,7 @@ export default function ProjectCard({
   tags,
   link,
   image,
+  client, // ✅ add this
 }: ProjectCardProps) {
   return (
     <article
@@ -24,7 +26,7 @@ export default function ProjectCard({
         transition-all duration-300 hover:-translate-y-2
         bg-black/40 backdrop-blur
         border border-white/5
-        h-[520px] sm:h-[540px]   /* 👈 fixed, responsive height */
+        h-[520px] sm:h-[540px]
         flex flex-col
       "
     >
@@ -52,19 +54,21 @@ export default function ProjectCard({
         )}
 
         {/* External link */}
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`View ${title} project`}
-          className="
-            absolute top-3 right-3 z-10
-            text-white/80 hover:text-[#FF9546]
-            transition-colors
-          "
-        >
-          <i className="fas fa-external-link-alt"></i>
-        </a>
+        {link ? (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`View ${title} project`}
+            className="
+              absolute top-3 right-3 z-10
+              text-white/80 hover:text-[#FF9546]
+              transition-colors
+            "
+          >
+            <i className="fas fa-external-link-alt"></i>
+          </a>
+        ) : null}
 
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -76,10 +80,17 @@ export default function ProjectCard({
           {title}
         </h3>
 
-        {/* Description grows but is clamped */}
         <p className="text-gray-400 mb-4 leading-relaxed line-clamp-4">
           {description}
         </p>
+
+        {/* Client */}
+        {client && client.length > 0 && (
+          <div className="mb-4 text-sm text-gray-400">
+            <span className="text-gray-500">Client:</span>{' '}
+            <span className="text-white/90">{client.join(', ')}</span>
+          </div>
+        )}
 
         {/* Tags pinned to bottom */}
         <div className="flex flex-wrap gap-2 mt-auto">
