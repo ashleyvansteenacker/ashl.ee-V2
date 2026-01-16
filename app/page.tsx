@@ -7,7 +7,7 @@ import HapticLink from './components/HapticLink';
 
 const projects = [
   {
-    title: 'Public Bulding Ghent',
+    title: 'Public Building Ghent',
     description:
   'A discreet media wall installation for the City of Ghent (Belgium), integrating dynamic visuals into the architecture.',
     tags: ['Madrix', 'Art-Net', 'SPI', 'Neonflex'],
@@ -16,7 +16,7 @@ const projects = [
     image: '/projects/gent.jpg',
   },
   {
-    title: 'Amsterdam project',
+    title: 'Amsterdam Project',
     description:
   'Implemented DMX connectivity and lighting control for a neon installation as part of a new concept in Amsterdam.',
     tags: ['DMX-512', 'CueCore2', 'B-Station2'],
@@ -34,9 +34,9 @@ const projects = [
     image: '/projects/bru.jpg',
   },
   {
-    title: 'Airport project',
+    title: 'Airport Project',
     description:
-  'Designed and implemented a large-scale LED facade installation to create dynamic lighting effects and enhance the passenger experience.',
+  'Designed and implemented a large scale LED facade installation to create dynamic lighting effects and enhance the passenger experience.',
     tags: ['SPI', 'Led Strip Studio', 'SPI Matrix'],
      client:['Vivalyte', 'Neopaul'],
     link: 'https://www.facebook.com/watch/?v=1047767099225140',
@@ -45,7 +45,7 @@ const projects = [
   {
     title: 'Movement Sensor',
     description:
-  'Built a custom motion-sensing system that triggers lighting scenes in real time to enhance interactivity.',
+  'Built a custom motion sensing system that triggers lighting scenes in real time to enhance interactivity.',
     tags: ['ESP32', 'OSC', 'POET Creator', 'Wi-Fi'],
      client:['Vivalyte'],
     link: '',
@@ -63,7 +63,7 @@ const projects = [
     {
     title: 'Branding AVA',
     description:
-  'AVA needed an eye-catching Sign to draw attention at their shops. I designed and implemented the LED control system including a remote access solution for easy updates.',
+'AVA needed an eye catching sign to draw attention at their shops. I designed and implemented the LED control system, including a remote access solution for easy updates.',
     tags: ['DMX-512', 'Led Strip Studio', 'Tailscale', '4G / LTE'],
     client:['Vivalyte', 'Neopaul'],
     link: 'https://www.linkedin.com/posts/neopaul-signs_neopaulsigns-lichtreclame-gevelbekleding-activity-7284507005157847040-blCg/?originalSubdomain=nl',
@@ -81,7 +81,7 @@ const projects = [
         {
     title: 'Dynamic Backdrop',
     description:
-  'Installation and configuration of a Dynamic backdrop (Low res LED screen) for a exhibition booth, enhancing the visual appeal and attracting visitors.',
+'Installation and configuration of a dynamic backdrop (low resolution LED screen) for an exhibition booth, enhancing visual appeal and attracting visitors.',
     tags: ['LED Wall', 'Colorlight', 'Video', 'Madrix'],
     client:['Vivalyte'],
     link: 'https://www.instagram.com/p/CjM8ZVQMCOK/?img_index=1',
@@ -140,9 +140,17 @@ export default function Home() {
     <div className="section-divider"></div>
 
     <div className="flex items-end justify-between gap-4 mb-12">
+      
       <h2 className="text-4xl md:text-5xl font-bold">Some of our past projects</h2>
+
+
+
       <span className="text-sm text-gray-400">Scroll →</span>
     </div>
+          <p className="text-sm text-gray-500">
+  All projects shown are collaborative efforts with clients, artists, and studios.
+</p>
+<br />
 
     <FeaturedWorkCarousel projects={projects} />
   </div>
@@ -158,9 +166,9 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold mb-8">About</h2>
 
           <div className="accent-border-left">
-    <p className="text-lg md:text-xl leading-relaxed text-gray-300 mb-6">
-  I&apos;m a creative technologist who thrives at the intersection of design and code.
-  I craft digital experiences that don&apos;t just work. They <span className="text-[#FF9546]">glow</span>.
+<p className="text-lg md:text-xl leading-relaxed text-gray-300 mb-6">
+  I design and build things with light, electronics, and code.
+  They don’t just work. They <span className="text-[#FF9546]">glow</span>.
 </p>
           </div>
         </div>
