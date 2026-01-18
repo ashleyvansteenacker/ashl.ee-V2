@@ -16,7 +16,7 @@ const projects = [
     image: '/projects/gent.jpg',
   },
   {
-    title: 'Amsterdam Project',
+    title: 'All Out Amsterdam',
     description:
   'Implemented DMX connectivity and lighting control for a neon installation as part of a new concept in Amsterdam.',
     tags: ['DMX-512', 'CueCore2', 'B-Station2'],
@@ -25,7 +25,7 @@ const projects = [
     image: '/projects/ams.jpg',
   },
   {
-    title: 'Brussels Art Project ',
+    title: 'Babelkot',
     description:
   'A collaboration with an artist where audio and lighting came together in an immersive installation.',
     tags: ['SPI', 'Video', 'Led Strip Studio', 'SPI-Matrix'],
@@ -69,6 +69,15 @@ const projects = [
     link: 'https://www.linkedin.com/posts/neopaul-signs_neopaulsigns-lichtreclame-gevelbekleding-activity-7284507005157847040-blCg/?originalSubdomain=nl',
     image: '/projects/ava.jpg',
   },
+                {
+    title: 'Light + Building 2024',
+    description:
+'For Vivalyte at Light + Building 2024, I setup an LED instalation that bridges Video, SPI and DMX to showcase their capabilities in lighting technology.',
+    tags: ['SPI','DMX-512', 'SPI-Matrix', 'Madrix','Colorlight','Novastar', 'Orion'],
+    client:['Vivalyte'],
+    link: 'https://www.instagram.com/p/C4K44OtIQPI/',
+    image: '/projects/LB2024.webp',
+  },
       {
     title: 'Press the button',
     description:
@@ -87,6 +96,25 @@ const projects = [
     link: 'https://www.instagram.com/p/CjM8ZVQMCOK/?img_index=1',
     image: '/projects/dyn.png',
   },
+          {
+    title: '[D]ARC awards 2024',
+    description:
+'VOGUELICIOUS A concept created by Paola Palma Picado for the [D]ARC awards 2024. I handled the LED installation and programming to bring the design to life.',
+    tags: ['SPI','Advatek A4-S Mk3', 'SPI-Matrix', 'PIR', 'Madrix'],
+    client:['Vivalyte, Light Bureau (London)'],
+    link: 'https://lightcollective.net/light/ing/darc-awards-2024',
+    image: '/projects/darc.webp',
+  },
+            {
+    title: 'Light UK 2025',
+    description:
+'For Vivalyte at Light UK 2025, I setup an LED instalation that bridges Video, SPI and DMX to showcase their capabilities in lighting technology.',
+    tags: ['SPI','DMX-512', 'SPI-Matrix', 'Stella 8', 'Poet Creator', 'ELM','Colorlight'],
+    client:['Vivalyte'],
+    link: 'https://www.instagram.com/p/DRPOjhGjf3v/',
+    image: '/projects/light25.webp',
+  },
+
 ];
 
 export default function Home() {
