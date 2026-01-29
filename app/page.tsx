@@ -114,6 +114,15 @@ const projects = [
     link: 'https://www.instagram.com/p/DRPOjhGjf3v/',
     image: '/projects/light25.webp',
   },
+{
+  title: 'PIM → ERP Integration Platform',
+  description:
+    'Designed and built a scalable integration platform syncing product, pricing, and variant data from Plytix PIM to Zoho ERP, automating workflows, reducing manual errors, and enabling consistent downstream outputs (PDFs, labels, documentation).',
+  tags: ['Zoho', 'Plytix', 'Node.js', 'NestJS', 'REST APIs', 'Linux', 'Automation'],
+  client: ['Vivalyte'],
+  link: '',
+  image: '',
+}
 
 ];
 
@@ -200,7 +209,7 @@ export default function Home() {
 </p>
 
 <div className="text-sm md:text-base text-gray-400 tracking-wide">
-ESP32 · CH32 · DMX · Art-Net · SPI · Madrix · Colorlight · Novastar · POET Designer · Node.js · and much more ;)
+ESP32 · CH32 · DMX · Art-Net · SPI · Madrix · Colorlight · Novastar · POET Designer · Node.js · Zoho · Plytix · and much more ;)
 </div>
 
           </div>
